@@ -1,0 +1,24 @@
+{
+    "expensesApp": {
+        "spending" : {
+            "home": {
+                "title": "Spendings",
+                "createLabel": "Crear nuevo Spending",
+                "createOrEditLabel": "Crear o editar Spending"
+            },
+            "created": "Un nuevo Spending ha sido creado con el identificador {{ param }}",
+            "updated": "Un Spending ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Spending ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Spending {{ id }}?"
+            },
+            "detail": {
+                "title": "Spending"
+            },
+            "concept": "Concept",
+            "amount": "Amount",
+            "expenseDate": "Expense Date",
+            "paymentMethod": "Payment Method"
+        }
+    }
+}

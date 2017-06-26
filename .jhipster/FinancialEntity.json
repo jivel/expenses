@@ -1,0 +1,33 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "paymentMethod",
+            "otherEntityName": "paymentMethod",
+            "otherEntityRelationshipName": "financialEntity"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "imageUrl",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20170626040617",
+    "javadoc": "Catálogo de entidades financieras\npueden ser bancos, cajas de ahorros\no cooperativas de crédito.",
+    "entityTableName": "financial_entity",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl"
+}

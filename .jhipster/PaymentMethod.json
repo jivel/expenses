@@ -1,0 +1,32 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "spending",
+            "otherEntityName": "spending",
+            "otherEntityRelationshipName": "paymentMethod"
+        },
+        {
+            "relationshipName": "financialEntity",
+            "otherEntityName": "financialEntity",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20170626040616",
+    "javadoc": "Catálogo de Métodos de Pago.\nEfectivo.\nTarjeta de Crédito.\nTarjeta de Dédito.\nVales de Despensa\n@author jimenezlav.",
+    "entityTableName": "payment_method",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl"
+}

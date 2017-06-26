@@ -1,0 +1,31 @@
+
+<div *ngIf="paymentMethod">
+    <h2><span jhiTranslate="expensesApp.paymentMethod.detail.title">Payment Method</span> {{paymentMethod.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="expensesApp.paymentMethod.description">Description</span></dt>
+        <dd>
+            <span>{{paymentMethod.description}}</span>
+        </dd>
+        <dt><span jhiTranslate="expensesApp.paymentMethod.financialEntity">Financial Entity</span></dt>
+        <dd>
+            <div *ngIf="paymentMethod.financialEntityId">
+                <a [routerLink]="['/financial-entity', paymentMethod.financialEntityId]">{{paymentMethod.financialEntityId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'payment-method/'+ paymentMethod.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,23 @@
+{
+    "expensesApp": {
+        "financialEntity" : {
+            "home": {
+                "title": "Financial Entities",
+                "createLabel": "Create a new Financial Entity",
+                "createOrEditLabel": "Create or edit a Financial Entity"
+            },
+            "created": "A new Financial Entity is created with identifier {{ param }}",
+            "updated": "A Financial Entity is updated with identifier {{ param }}",
+            "deleted": "A Financial Entity is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Financial Entity {{ id }}?"
+            },
+            "detail": {
+                "title": "Financial Entity"
+            },
+            "name": "Name",
+            "imageUrl": "Image Url",
+            "paymentMethod": "Payment Method"
+        }
+    }
+}

@@ -1,0 +1,39 @@
+
+<div *ngIf="spending">
+    <h2><span jhiTranslate="expensesApp.spending.detail.title">Spending</span> {{spending.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="expensesApp.spending.concept">Concept</span></dt>
+        <dd>
+            <span>{{spending.concept}}</span>
+        </dd>
+        <dt><span jhiTranslate="expensesApp.spending.amount">Amount</span></dt>
+        <dd>
+            <span>{{spending.amount}}</span>
+        </dd>
+        <dt><span jhiTranslate="expensesApp.spending.expenseDate">Expense Date</span></dt>
+        <dd>
+            <span>{{spending.expenseDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="expensesApp.spending.paymentMethod">Payment Method</span></dt>
+        <dd>
+            <div *ngIf="spending.paymentMethodId">
+                <a [routerLink]="['/payment-method', spending.paymentMethodId]">{{spending.paymentMethodId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'spending/'+ spending.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

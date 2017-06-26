@@ -1,0 +1,62 @@
+<div>
+    <h2>
+        <span jhiTranslate="expensesApp.paymentMethod.home.title">Payment Methods</span>
+        <button class="btn btn-primary float-right create-payment-method" [routerLink]="['/', { outlets: { popup: ['payment-method-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="expensesApp.paymentMethod.home.createLabel">
+            Create new Payment Method
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="paymentMethods">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="reset.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="description"><span jhiTranslate="expensesApp.paymentMethod.description">Description</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="financialEntityId"><span jhiTranslate="expensesApp.paymentMethod.financialEntity">Financial Entity</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody infinite-scroll (scrolled)="loadPage(page + 1)" [infiniteScrollDisabled]="page >= links['last']" [infiniteScrollDistance]="0">
+            <tr *ngFor="let paymentMethod of paymentMethods ;trackBy: trackId">
+                <td><a [routerLink]="['../payment-method', paymentMethod.id ]">{{paymentMethod.id}}</a></td>
+                <td>{{paymentMethod.description}}</td>
+                <td>
+                    <div *ngIf="paymentMethod.financialEntityId">
+                        <a [routerLink]="['../financial-entity', paymentMethod.financialEntityId  ]" >{{paymentMethod.financialEntityId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../payment-method', paymentMethod.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'payment-method/'+ paymentMethod.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'payment-method/'+ paymentMethod.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
