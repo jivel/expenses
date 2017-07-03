@@ -1,7 +1,7 @@
 {
   "name": "expenses",
   "version": "0.0.0",
-  "description": "Description for expenses",
+  "description": "Expense record",
   "private": true,
   "cacheDirectories": [
     "node_modules"

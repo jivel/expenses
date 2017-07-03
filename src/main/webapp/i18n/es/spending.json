@@ -2,23 +2,23 @@
     "expensesApp": {
         "spending" : {
             "home": {
-                "title": "Spendings",
-                "createLabel": "Crear nuevo Spending",
-                "createOrEditLabel": "Crear o editar Spending"
+                "title": "Gastos",
+                "createLabel": "Registrar nuevo Gasto",
+                "createOrEditLabel": "Crear o editar Gasto"
             },
-            "created": "Un nuevo Spending ha sido creado con el identificador {{ param }}",
-            "updated": "Un Spending ha sido actualizado con el identificador {{ param }}",
-            "deleted": "Un Spending ha sido eliminado con el identificador {{ param }}",
+            "created": "Un nuevo Gasto ha sido creado con el identificador {{ param }}",
+            "updated": "Un Gasto ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Gasto ha sido eliminado con el identificador {{ param }}",
             "delete": {
-                "question": "¿Seguro que quiere eliminar Spending {{ id }}?"
+                "question": "¿Seguro que quiere eliminar el Gasto {{ id }}?"
             },
             "detail": {
-                "title": "Spending"
+                "title": "Gasto"
             },
-            "concept": "Concept",
-            "amount": "Amount",
-            "expenseDate": "Expense Date",
-            "paymentMethod": "Payment Method"
+            "concept": "Concepto",
+            "amount": "Monto",
+            "expenseDate": "Fecha del gasto",
+            "paymentMethod": "Método de pago"
         }
     }
 }

@@ -1,10 +1,10 @@
 
-  ${AnsiColor.GREEN}      ██╗${AnsiColor.RED} ██╗   ██╗ ████████╗ ███████╗   ██████╗ ████████╗ ████████╗ ███████╗
-  ${AnsiColor.GREEN}      ██║${AnsiColor.RED} ██║   ██║ ╚══██╔══╝ ██╔═══██╗ ██╔════╝ ╚══██╔══╝ ██╔═════╝ ██╔═══██╗
-  ${AnsiColor.GREEN}      ██║${AnsiColor.RED} ████████║    ██║    ███████╔╝ ╚█████╗     ██║    ██████╗   ███████╔╝
-  ${AnsiColor.GREEN}██╗   ██║${AnsiColor.RED} ██╔═══██║    ██║    ██╔════╝   ╚═══██╗    ██║    ██╔═══╝   ██╔══██║
-  ${AnsiColor.GREEN}╚██████╔╝${AnsiColor.RED} ██║   ██║ ████████╗ ██║       ██████╔╝    ██║    ████████╗ ██║  ╚██╗
-  ${AnsiColor.GREEN} ╚═════╝ ${AnsiColor.RED} ╚═╝   ╚═╝ ╚═══════╝ ╚═╝       ╚═════╝     ╚═╝    ╚═══════╝ ╚═╝   ╚═╝
-
-${AnsiColor.BRIGHT_BLUE}:: JHipster 🤓  :: Running Spring Boot ${spring-boot.version} ::
-:: http://jhipster.github.io ::${AnsiColor.DEFAULT}
+ ${AnsiColor.RED} ███████╗ ${AnsiColor.GREEN}   ██╗  ██╗    ██████╗     ███████╗    ███╗   ██╗    ███████╗    ███████╗    ███████╗
+ ${AnsiColor.RED} ██╔════╝ ${AnsiColor.GREEN}   ╚██╗██╔╝    ██╔══██╗    ██╔════╝    ████╗  ██║    ██╔════╝    ██╔════╝    ██╔════╝
+ ${AnsiColor.RED} █████╗   ${AnsiColor.GREEN}    ╚███╔╝     ██████╔╝    █████╗      ██╔██╗ ██║    ███████╗    █████╗      ███████╗
+ ${AnsiColor.RED} ██╔══╝   ${AnsiColor.GREEN}    ██╔██╗     ██╔═══╝     ██╔══╝      ██║╚██╗██║    ╚════██║    ██╔══╝      ╚════██║
+ ${AnsiColor.RED} ███████╗ ${AnsiColor.GREEN}   ██╔╝ ██╗    ██║         ███████╗    ██║ ╚████║    ███████║    ███████╗    ███████║
+ ${AnsiColor.RED} ╚══════╝ ${AnsiColor.GREEN}   ╚═╝  ╚═╝    ╚═╝         ╚══════╝    ╚═╝  ╚═══╝    ╚══════╝    ╚══════╝    ╚══════╝
+                                                                 
+${AnsiColor.BRIGHT_BLUE}:: Jivel 🤓  :: JHipster :: Running Spring Boot ${spring-boot.version} ::
+:: https://github.com/jivel/expenses.git ::${AnsiColor.DEFAULT}
